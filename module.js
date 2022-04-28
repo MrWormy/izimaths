@@ -44,6 +44,7 @@ function changeActivity(e) {
     const ac = e.currentTarget.id;
     if (activities.hasOwnProperty(ac)) {
         title.nodeValue = activities[ac];
+        answer.parentElement.classList.remove('correct', 'incorrect');
     }
 }
 
@@ -81,7 +82,7 @@ function clickNum(e) {
     }
 }
 
-function clickBackSpace(e) {
+function clickBackSpace() {
     answer.nodeValue = answer.nodeValue.slice(0, -1);
 }
 
